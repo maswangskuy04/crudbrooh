@@ -1,0 +1,217 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #fdfffc;
+    box-shadow: 0 1px 25px #000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container .brand-website {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    margin: 15px;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.navbar .container .navbar-list-link {
+    
+}
+
+.navbar .container .navbar-list-link .menu-link {
+    display: flex;
+}
+
+.navbar .container .navbar-list-link .menu-link .navitem {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.navbar .container .navbar-list-link .menu-link .navitem-2 {
+    list-style-type: none;
+    margin: 0 30px;
+}
+
+
+.navbar .container .navbar-list-link .menu-link .navitem-2 .navlink {
+    text-decoration: none;
+    background-color: #caa2e4;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+
+.navbar .container .navbar-list-link .menu-link .navitem-2 .navlink:hover {
+    box-shadow: 0 2px 10px #373e47d0;
+    background-color: #c1bdeb;
+}
+.navbar .container .navbar-list-link .menu-link .navitem .navlink {
+    text-decoration: none;
+    padding: 10px;
+    color: #c4d1de;
+    font-size: 1.1rem;
+    transition: .3s ease-in-out;
+}
+
+.navbar .container .navbar-list-link .menu-link .navitem .navlink:hover {
+    text-decoration: underline;
+    text-decoration-color: #fedc97;
+    text-decoration-thickness: 3px;
+    color: #ffa69e;
+}
+
+.navbar .container .btn-hamburger {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: #eb5e28;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .navbar .container .btn-hamburger {
+        display: block;
+    }
+
+    .navbar .container .navbar-list-link .menu-link {
+        display: none;
+        transition: .6s ease-in-out;
+    }
+
+    .navbar .container .navbar-list-link .menu-link.tampil {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #403d39;
+        top: 40px;
+        left: 0px;
+    }
+
+    .navbar .container .navbar-list-link .menu-link .navitem {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .navbar .container .navbar-list-link .menu-link .navitem .navlink {
+        font-size: 1.3rem;
+    }
+
+    .navbar .container .navbar-list-link .menu-link .navitem .navlink:hover {
+        color: #fff;
+        text-decoration: underline;
+        text-decoration-color: #fff;
+    }
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.wrapper .table-hover {
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    background-color: #fafaff;
+}
+
+.wrapper .table-hover thead tr {
+    background-color: #5e6472;
+    color: #faf3dd;
+    font-size: 1.1rem;
+}
+
+.wrapper .table-hover th, td {
+    padding: 12px 15px;
+}
+
+.wrapper .table-hover tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.wrapper .table-hover tbody tr:nth-child(even) {
+    background-color: #eef0f2;
+}
+
+.wrapper .table-hover tbody tr:nth-child(odd):hover {
+    background-color: #eef0f2;
+}
+
+.wrapper .table-hover tbody tr:last-of-type {
+    border-bottom: 2px solid #aed9e0;
+}
+
+.wrapper .table-hover tbody tr td .btn-create {
+    background-color: #b8e0d2;
+}
+
+.wrapper .table-hover tbody tr td .btn-read {
+    background-color: #c4d1de;
+}
+
+.wrapper .table-hover tbody tr td .btn-update {
+    background-color: #fedc97;
+}
+
+.wrapper .table-hover tbody tr td .btn-delete {
+    background-color: #bb4430;
+}
+
+.wrapper .table-hover tbody tr .col {
+    display: flex;
+    gap: 5px;
+}
+
+.wrapper .table-hover tbody tr td a {
+    padding: 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+
+.wrapper .table-hover tbody tr td a:hover {
+    box-shadow: 0 4px 10px #000000b7;
+}
+
+.copyright {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5e6472;
+}
+
+.copyright .text-footer {
+    text-align: center;
+    color: #fff;
+}
