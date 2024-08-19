@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+include 'auth/auth.php';
+
+if(isset($_SESSION['email']))
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,14 +27,14 @@
                     <li class="navitem"><a href="#" class="navlink">Data User</a></li>
                     <li class="navitem"><a href="#" class="navlink">Data Level</a></li>
                     <li class="navitem"><a href="#" class="navlink">Detail User</a></li>
-                    <li class="navitem-2"><a href="#" class="navlink">Log In</a></li>
+                    <li class="navitem-2"><a href="login.php" class="navlink">Log In</a></li>
                 </ul>
             </div>
             <div class="btn-hamburger">&#9776;</div>
         </div>
     </nav>
 
-    <h2 style="text-align:center">Halaman Preview. <span style="color: #c81d25;">Harap <a href="" style="color: #119da4">login</a> terlebih dahulu untuk mengakses seluruh halaman.</span></h2>
+    <h2 style="text-align:center">Halaman Preview. <span style="color: #c81d25;">Harap <a href="login.php" style="color: #119da4">login</a> terlebih dahulu untuk mengakses seluruh halaman.</span></h2>
 
     <div class="wrapper">
         <table class="table-hover">
