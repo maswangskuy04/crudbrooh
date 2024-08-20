@@ -242,7 +242,8 @@ body {
     text-align: center;
     text-shadow: 0 2px 3px #ffa69e,
     0 -2px 3px #caa2e4,
-    0 0 20px #5e6472;
+    0 0 20px #5e6472,
+    0 12px 12px #003049;
 }
 
 
@@ -257,7 +258,7 @@ body {
     border: none;
     border-radius: 20px;
     outline: none;
-    border: 2px solid #ffa69eb2;
+    border: 2px solid #fdf0d5;
     margin-bottom: 20px;
     margin-left: 46px;
     text-align: center;
@@ -277,5 +278,5 @@ body {
 }
 
 .wrapper-lgn .container-login .form-input:focus {
-    border: 2px solid #faf3dd;
+    border: 2px solid #003049;
 }

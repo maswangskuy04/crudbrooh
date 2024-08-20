@@ -2,6 +2,7 @@
 
 session_start();
 include 'auth/auth.php';
+include 'auth/function.php';
 
 if(isset($_SESSION['email']))
 

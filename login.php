@@ -2,11 +2,13 @@
 
 session_start();
 include 'auth/auth.php';
+include 'auth/function.php';
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +20,7 @@ include 'auth/auth.php';
         }
     </style>
 </head>
+
 <body>
     <div class="wrapper-lgn">
         <p class="login">Sign in</p>
@@ -36,4 +39,5 @@ include 'auth/auth.php';
         </div>
     </div>
 </body>
+
 </html>
