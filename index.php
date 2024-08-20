@@ -4,7 +4,7 @@ session_start();
 include 'auth/auth.php';
 include 'auth/function.php';
 
-if(isset($_SESSION['email']))
+if (isset($_SESSION['email']))
 
 ?>
 
@@ -87,7 +87,7 @@ if(isset($_SESSION['email']))
                     <td>Laki-Laki</td>
                     <td>Jl. Ke Tempat Cukur Rusdi Ngawi</td>
                     <td class="col">
-                        <a href="" class="btn-create">Create</a>
+                        <a href="views/atmin/create.php" class="btn-create">Create</a>
                         <a href="" class="btn-read">Read</a>
                         <a href="" class="btn-update">Update</a>
                         <a href="" class="btn-delete">Delete</a>

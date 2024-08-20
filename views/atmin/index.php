@@ -19,15 +19,28 @@ $rowUser = mysqli_fetch_assoc($queryLevel);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../library/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <p>Halo <?= $_SESSION['nama_lengkap']; ?></p>
-    <p>Hak Akses : <?= $rowUser['nama_level']; ?></p>
-    <p>Keteragan : <?= $rowUser['keterangan']; ?></p>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand-website">CRUD BROOH</a>
+            <div class="navbar-list-link">
+                <ul class="menu-link" id="transEffect">
+                    <li class="navitem"><a href="#" class="navlink">Home</a></li>
+                    <li class="navitem"><a href="#" class="navlink">Data User</a></li>
+                    <li class="navitem"><a href="#" class="navlink">Data Level</a></li>
+                    <li class="navitem"><a href="#" class="navlink">Detail User</a></li>
+                    <li class="navitem-2"><a href="../../logout.php" class="navlink">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="btn-hamburger">&#9776;</div>
+        </div>
+    </nav>
 
-    <a href="../../logout.php">Logout</a>
+    <h1><?= $rowUser['nama_level']; ?></h1>
 </body>
 
 </html>
