@@ -4,8 +4,6 @@ session_start();
 include 'auth/auth.php';
 include 'auth/function.php';
 
-if (isset($_SESSION['email']))
-
 ?>
 
 <!DOCTYPE html>
@@ -24,82 +22,27 @@ if (isset($_SESSION['email']))
             <a href="#" class="brand-website">CRUD BROOH</a>
             <div class="navbar-list-link">
                 <ul class="menu-link" id="transEffect">
-                    <li class="navitem"><a href="#" class="navlink">Home</a></li>
-                    <li class="navitem"><a href="#" class="navlink">Data User</a></li>
+                    <li class="navitem"><a href="" class="navlink">Home</a></li>
+                    <li class="navitem"><a href="pg=index" class="navlink">Data User</a></li>
                     <li class="navitem"><a href="#" class="navlink">Data Level</a></li>
                     <li class="navitem"><a href="#" class="navlink">Detail User</a></li>
-                    <li class="navitem-2"><a href="login.php" class="navlink">Log In</a></li>
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+                        <li class="navitem-2"><a href="logout.php" class="navlink">Logout</a></li>
+                    <?php else: ?>
+                        <li class="navitem-2"><a href="login.php" class="navlink">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="btn-hamburger">&#9776;</div>
         </div>
     </nav>
 
-    <h2 style="text-align:center">Halaman Preview. <span style="color: #c81d25;">Harap <a href="login.php" style="color: #119da4">login</a> terlebih dahulu untuk mengakses seluruh halaman.</span></h2>
-
-    <div class="wrapper">
-        <table class="table-hover">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Hak Akses</th>
-                    <th>Nama Lengkap</th>
-                    <th>Email</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Alamat</th>
-                    <th colspan="4">Opsi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Atmin</td>
-                    <td>Reyhan Marlizal</td>
-                    <td>reyhanmarlizal@gmail.com</td>
-                    <td>Laki-Laki</td>
-                    <td>Karet Ps Baru Barat V</td>
-                    <td class="col">
-                        <a href="views/atmin/create.php" class="btn-create">Create</a>
-                        <a href="" class="btn-read">Read</a>
-                        <a href="" class="btn-update">Update</a>
-                        <a href="" class="btn-delete">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Atmin Suki</td>
-                    <td>Ambacika</td>
-                    <td>ambacikangawi@gmail.com</td>
-                    <td>Perempuan</td>
-                    <td>Jl. Barudak Ngawi 69</td>
-                    <td class="col">
-                        <a href="views/atmin/create.php" class="btn-create">Create</a>
-                        <a href="" class="btn-read">Read</a>
-                        <a href="" class="btn-update">Update</a>
-                        <a href="" class="btn-delete">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Atmin Suki</td>
-                    <td>Ambacuki</td>
-                    <td>ambacukigawi@gmail.com</td>
-                    <td>Laki-Laki</td>
-                    <td>Jl. Ke Tempat Cukur Rusdi Ngawi</td>
-                    <td class="col">
-                        <a href="views/atmin/create.php" class="btn-create">Create</a>
-                        <a href="" class="btn-read">Read</a>
-                        <a href="" class="btn-update">Update</a>
-                        <a href="" class="btn-delete">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+        <h1 style="color: red;">Woops!</h1>
+        <span><a href="" style="font-weight: bold;">Login</a> dulu lah broo untuk akses seluruh halaman.</span>
     </div>
 
-    <footer class="copyright">
-        <p class="text-footer">&copy; Reyhan Marlizal 2024</p>
-    </footer>
+    <?php include('inc/footer.php'); ?>
 
     <script type="text/javascript">
         const btn_hamburger = document.querySelector('.btn-hamburger');

@@ -1,8 +1,13 @@
 <?php
 
-if(isset($_POST['id_hak_akses']) == "") {
+session_start();
+include('../../auth/auth.php');
+include('../../auth/function.php');
+
+if (isset($_SESSION['id_hak_akses']) == '') {
     header("location:../../login.php?message=fail");
 }
+
 
 ?>
 
@@ -14,6 +19,6 @@ if(isset($_POST['id_hak_akses']) == "") {
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="../../logout.php">Logout</a>
 </body>
 </html>
