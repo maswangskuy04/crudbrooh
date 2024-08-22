@@ -14,11 +14,6 @@ include 'auth/function.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="library/css/style.css">
     <title>Halaman Login</title>
-    <style>
-        body {
-            background: url('library/images/1226404797_preview_1119379893_preview_Forest River.jpg');
-        }
-    </style>
 </head>
 
 <body>

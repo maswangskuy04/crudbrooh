@@ -8,6 +8,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .navbar {
     background-color: #fdfffc;
     box-shadow: 0 1px 25px #000;
@@ -156,7 +170,6 @@ body {
 
 .wrapper .btn-add:hover {
     transform: translate(110px);
-    box-shadow: -4px 0 8px #000;
 }
 
 .wrapper .table-hover {
@@ -243,7 +256,7 @@ body {
 /* style form login brooh */
 
 .wrapper-lgn {
-    background-color: #aed9e0b4;
+    background: url('../images/1226404797_preview_1119379893_preview_Forest\ River.jpg');
     width: 350px;
     height: 350px;
     position: absolute;
@@ -285,7 +298,6 @@ body {
 }
 
 .wrapper-lgn .container-login .btn-login {
-    width: 76%;
     padding: 10px 20px;
     margin-left: 46px;
     margin-top: 15px;
@@ -295,10 +307,16 @@ body {
     border-radius: 10px;
     font-size: 14px;
     cursor: pointer;
+    width: 76%;
+    transition: .6s ease-in-out;
+}
+
+.wrapper-lgn .container-login .btn-login:hover {
+    background-color: #9f86c0;
 }
 
 .wrapper-lgn .container-login .form-input:focus {
-    border: 2px solid #003049;
+    border: 2px solid #9f86c0;
 }
 
 
